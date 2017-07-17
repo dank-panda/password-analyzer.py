@@ -7,6 +7,10 @@ class colors:
 	yellow = '\033[93m'
 	red = '\033[91m'
 	end = '\033[0m'
+	
+if len(sys.argv) < 2:
+    print colors.yellow +"Usage: python " + sys.argv[0] + " <passwords_file.txt>\n" + colors.end
+    sys.exit()
 
 passfile = sys.argv[1]
 starts_upper = 0

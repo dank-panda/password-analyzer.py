@@ -1,11 +1,11 @@
 # password-analyzer.py
 A quick python script to analyze a given set of passwords and give you some statistics.
 
-#Usage:
+#Usage:#
 python password-analyzer.py <wordlist> 
 
-#Example:
-root@test: ~/password-analyzer.py/\# python password-analyzer.py wordlist.txt 
+#Example:#
+root@test: ~/password-analyzer.py/# python password-analyzer.py wordlist.txt 
 ------------------------------------------------------------
  Starting Characters
 ------------------------------------------------------------

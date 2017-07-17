@@ -4,7 +4,7 @@ A quick python script to analyze a given set of passwords and give you some stat
 ## Usage: #
 **python password-analyzer.py _wordlist.txt_**
 
-## Output: #
+## Sample Output: #
 ------------------------------------------------------------
  Starting Characters
 ------------------------------------------------------------

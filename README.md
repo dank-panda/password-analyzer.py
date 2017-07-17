@@ -2,4 +2,4 @@
 A quick python script to analyze a given set of passwords and give you some statistics.
 
 Usage:
-python password-analyzer.py <wordlist> 
+**python password-analyzer.py <wordlist>**

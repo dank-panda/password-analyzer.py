@@ -2,9 +2,10 @@
 A quick python script to analyze a given set of passwords and give you some statistics. Used for identifying the most effective hashcat rules and masks, based on observed password trends. Run this against your dumped passwords, _i.e. mimikatz and hashcat output_, to identify trends. This will help you decide which rules and masks will most likely be effective in subsequent runs.
 
 ## Usage: #
-python password-analyzer.py **_wordlist.txt_**
+    python password-analyzer.py <wordlist.txt>
 
 ## Sample Output: #
+```
 ------------------------------------------------------------
  Starting Characters
 ------------------------------------------------------------
@@ -64,3 +65,4 @@ python password-analyzer.py **_wordlist.txt_**
 ------------------------------------------------------------
  0 of the 258 passwords have the client's name
   [ ~ 0 % ] 
+```

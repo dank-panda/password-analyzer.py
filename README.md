@@ -6,6 +6,7 @@ python password-analyzer.py <wordlist>
 
 Example
 root@test: python password-analyzer.py wordlist.txt 
+
 ------------------------------------------------------------
  Starting Characters
 ------------------------------------------------------------

@@ -1,10 +1,10 @@
 # password-analyzer.py
-A quick python script to analyze a given set of passwords and give you some statistics.
+A quick python script to analyze a given set of passwords and give you some statistics. Used for identifying the most effective hashcat rules and masks, based on observed password trends.
 
 ## Usage: #
 **python password-analyzer.py _wordlist.txt_**
 
-## Output #
+## Output: #
 ------------------------------------------------------------
  Starting Characters
 ------------------------------------------------------------

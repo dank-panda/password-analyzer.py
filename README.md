@@ -1,8 +1,8 @@
 # password-analyzer.py
-A quick python script to analyze a given set of passwords and give you some statistics. Used for identifying the most effective hashcat rules and masks, based on observed password trends. Run this against your dumped passwords, _i.e. mimikatz and hashcat output_, to identify trends. This will help you decide which rules and masks will most likely be effective in subsequent runs.
+A quick python script to analyze a given set of passwords and give you some statistics. Used for identifying the most effective hashcat rules and masks, based on observed password trends. Run this against your dumped passwords, _i.e. mimikatz and hashcat output_, to identify trends. This will help you decide which rules and masks will most likely be effective in subsequent runs. _Note, the script requires the passwords to be separated by new lines. CSVs wont work._
 
 ## Usage: #
-    python password-analyzer.py <wordlist.txt>
+    python password-analyzer.py <password_file.txt>
 
 ## Sample Output: #
 ```

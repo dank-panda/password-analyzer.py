@@ -1,18 +1,23 @@
 #!/usr/bin/python
-
 import sys
 
+#Author: dank-panda
+#version: 0.1 - initial script
+
+#create a class so we can add some colors to the output
 class colors:
 	green = '\033[92m'
 	yellow = '\033[93m'
 	red = '\033[91m'
 	end = '\033[0m'
-	
+
+#make sure we have the right args from the command line
 if len(sys.argv) < 2:
     print colors.yellow +"Usage: python " + sys.argv[0] + " <passwords_file.txt>\n" + colors.end
     sys.exit()
 
 passfile = sys.argv[1]
+#set some vars, and zero them out so they can be used as counters
 starts_upper = 0
 starts_lower = 0
 starts_number = 0
@@ -28,10 +33,12 @@ length9 = 0
 length10 = 0
 length11 = 0
 length12 = 0
+#check for client names. Replace the placeholders with specifc names to search for.
 contains_client = 0
 clients = ('client','client1','client2')
 num_words = 0
 
+#check starting character
 with open(passfile) as temp:
 	for line in temp:
 		num_words +=1
@@ -45,6 +52,7 @@ with open(passfile) as temp:
 			starts_special +=1
 temp.close()
 
+#check ending character
 with open(passfile) as temp2:
         for line in temp2:
 		if line.strip()[-1:].isalpha():
@@ -55,6 +63,7 @@ with open(passfile) as temp2:
 			ends_special +=1
 temp2.close()
 
+#check word length
 with open(passfile) as temp3:
         for line in temp3:
                 if len(line) <= 5:
@@ -75,6 +84,7 @@ with open(passfile) as temp3:
                         length12 +=1
 temp3.close()
 
+#check for client names specified in the vars from the beginning of the script
 with open(passfile) as temp4:
         for line in temp4:
 		line = line.lower()
@@ -82,6 +92,7 @@ with open(passfile) as temp4:
                         contains_client +=1
 temp4.close
 
+#calculating percentages
 percent_starts_upper = starts_upper * 100 / num_words
 
 if (percent_starts_upper >= 67):
@@ -226,7 +237,7 @@ elif (percent_client <= 33):
 else:
         color_client = colors.yellow
 
-
+#writing the output of the calculations and colorizing
 print "-" *60
 print " Starting Characters"
 print "-" *60
